@@ -45,7 +45,7 @@ num = 0#                           配列を管理する為の変数
     しかし、大きさが違う画像を表示する場合に一つの変数を使いまわしてしまうと、リサイズして変数の情報を更新する際に
     すでに画面に表示されている画像が参照している変数の情報も更新されてしまう。どういう理由かはわからないが、この時
     すでに表示されている画像は消えてしまう。デバッガー求む
-    以下に上記の現象が発生していたコードを記述しておく
+    以下に上記の現象が発生していたコードを記述しておくめんどいからいいや
 '''
 
 
@@ -80,7 +80,7 @@ def resizedDrawer(event):#リサイズした画像を挿入する関数
     #画像管理用変数の更新
     imgnum += 1
 
-def allClear(event):
+def allClear(event):#全部の画像を消す関数
     global imgnum,num
     #画像を全部消す
     for i in range(imgnum + 1):#普通の画像を全部消す
@@ -118,12 +118,14 @@ def undo(event):#画像を一つ消す
 #ウィジェット関連
 #フレーム生成#操作パネル
 F0 = LabelFrame(root,relief="raised",borderwidth=15,bg="gray",text="操作パネル",font=(font,fontsize),fg="#7fffd4")
+
 #ボタン生成
-#生成ボタン
+#普通の生成ボタン
 drwrbtn = Button(F0,text=u'標準画像生成',font=(font,fontsize))
 drwrbtn.bind("<Button-1>",drawer)
 drwrbtn.grid(row=1,column=1)
 
+#リサイズしたやつ生成ボタン
 sdrwbtn = Button(F0,text=u'リサイズ挿入',font=(font,fontsize))
 sdrwbtn.bind("<Button-1>",resizedDrawer)
 sdrwbtn.grid(row=2,column=1)
