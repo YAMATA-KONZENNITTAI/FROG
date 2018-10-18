@@ -1,4 +1,5 @@
 # FROG
 FROG
 FROGGER
-FROGGEST
+FROGGEST  
+画像生成しすぎるとメモリ食われるので注意
