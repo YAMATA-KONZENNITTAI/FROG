@@ -1,0 +1,7 @@
+q-終了
+p-プレビュー
+return-標準画像生成
+backspace-直前消し
+delete-全消し
+shiftReturn-リサイズ挿入
+controlReturn-三位一体
